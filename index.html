@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=“th”>
+<head>
+<meta charset=“UTF-8”>
+<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+<title>ถึงคนเก่า ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#dff7ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.card{
+  width:320px;
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+ h1{color:#ff5c8a;}
+button{
+  background:#ff8fb1;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:30px;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=“card”>
+  <h1>💗 ถึงคนเก่า</h1>
+  <p id=“text”>มีเรื่องที่อยากจะบอก...</p>
+  <button onclick=“nextPage()”>หน้าถัดไป</button>
+</div>
+
+<script>
+const msg=[
+“มีเรื่องที่อยากจะบอก...”,
+“ขอบคุณที่ยังคุยด้วย”,
+“อยากให้เราสองคนได้มีโอกาส”,
+“มานั่งคุยกับแบบทั้งสองคนเข้าใจกัน”,
+"ไม่เอาแบบทุกๆๆครั้งที่พามา",
+"ละอยากชอบคุณที่ยังค่อยช่วยกัน",
+"ขอโทดกับทุกอย่างที่เคยทำไม่ดีด้วย",
+"ขอให้มีความสุขในทุกๆๆวัน",
+"กินข้าวอร่อยทุกมื้อ",
+"ละขอโทด",
+];
+
+let i=0;
+
+function nextPage(){
+  i++;
+  if(i<msg.length){ 
+  document.getElementById(“text”).innerText=msg[i];
+  }else{
+    document.body.innerHTML=
+    “<h1 style=‘font-family:sans-serif;text-align:center;color:#ff4f8b’>ขอให้โชคดีกับทางที่เลือก 💕</h1>”;
+  }
+}
+</script>
+
+</body>
+</html>
